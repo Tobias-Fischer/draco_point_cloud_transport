@@ -49,7 +49,7 @@ add_library(${PROJECT_NAME}
         src/PC2toDraco.cpp)
 
 add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_gencfg draco_point_cloud_transport_generate_messages_cpp draco)
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} libdraco.so)
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} draco::draco)
 
 class_loader_hide_library_symbols(${PROJECT_NAME})
 
